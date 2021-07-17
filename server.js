@@ -16,7 +16,6 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.get("/users",(req,res)=>{
     users.find({}, (err, data) => {
-        messagesArray= data;
         res.send(data);
 });
 });
